@@ -15,10 +15,10 @@ from langchain.embeddings.cohere import CohereEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 
-llm = Cohere(api_key=st.secrets.COHERE_API_KEY , verbose=False)
+llm = Cohere(api_key=st.secrets.cohere , verbose=False)
 chain = load_qa_chain(llm, chain_type="stuff")
 
-deepgram = DeepgramClient(st.secrets.DEEPGRAM_API_KEY)
+deepgram = DeepgramClient(st.secrets.deepgram)
 options = PrerecordedOptions(
     model="nova-2",
     smart_format=True,
