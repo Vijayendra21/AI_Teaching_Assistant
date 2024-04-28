@@ -3,4 +3,4 @@ PyPDF2
 deepgram-sdk
 langchain
 langchain_community
-dotenv
+dotenv==1.0.1
