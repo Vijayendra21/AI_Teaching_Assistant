@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 from PyPDF2 import PdfReader
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 from deepgram import (
     DeepgramClient,
@@ -16,12 +16,12 @@ from langchain.embeddings.cohere import CohereEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 
-load_dotenv()
+#load_dotenv()
 
-llm = Cohere(verbose=False)
+llm = Cohere(cohere_api_key=st.secrets["COHERE_API_KEY"] , verbose=False)
 chain = load_qa_chain(llm, chain_type="stuff")
 
-deepgram = DeepgramClient()
+deepgram = DeepgramClient(st.secrets["DEEPGRAM_API_KEY"])
 options = PrerecordedOptions(
     model="nova-2",
     smart_format=True,
