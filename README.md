@@ -6,7 +6,7 @@ This application is a Streamlit-based AI teacher bot that transcribes PDF docume
 
 ### Prerequisites
 
-- Python 3.6+
+- Python 3.10+
 - Streamlit
 - PyPDF2
 - deepgram
