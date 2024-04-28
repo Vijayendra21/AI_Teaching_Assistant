@@ -68,3 +68,6 @@ The application will start and open in your default web browser. You can now int
 - Transcribes PDF documents and audio files using OpenAI Whisper.
 - Provides detailed notes and answers questions based on the content.
 - Supports interactive chat with the AI Teacher Bot for further clarification or queries.
+
+![image](https://github.com/ksvikash/AI_Teaching_Assistant/assets/87771290/708d29ca-9d1a-484e-bec8-61d2f9976fbc)
+
