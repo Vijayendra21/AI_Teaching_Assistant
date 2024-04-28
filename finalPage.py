@@ -1,12 +1,14 @@
 import os
 import streamlit as st
 from PyPDF2 import PdfReader
+from dotenv import load_dotenv
 
 from deepgram import (
     DeepgramClient,
     PrerecordedOptions,
     FileSource,
 )
+
 import httpx
 from langchain_community.llms import Cohere
 from langchain.text_splitter import CharacterTextSplitter
@@ -14,16 +16,12 @@ from langchain.embeddings.cohere import CohereEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 
+load_dotenv()
 
-def setCohereAPI():
-    os.environ["COHERE_API_KEY"] = "YGE5KbwA6SwirK8OozaIcD89SoT1Ml04XsB0zyp2"
-
-
-llm = Cohere(
-    cohere_api_key="YGE5KbwA6SwirK8OozaIcD89SoT1Ml04XsB0zyp2", verbose=False)
+llm = Cohere(verbose=False)
 chain = load_qa_chain(llm, chain_type="stuff")
-DEEPGRAM_API_KEY = "9412c882aa9f188edf6fd4550cb6dff4450e7146"
-deepgram = DeepgramClient(DEEPGRAM_API_KEY)
+
+deepgram = DeepgramClient()
 options = PrerecordedOptions(
     model="nova-2",
     smart_format=True,
