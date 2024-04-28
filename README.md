@@ -1,6 +1,6 @@
 # AI Teacher Bot based on your Resource
 
-This application is a Streamlit-based AI teacher bot that transcribes PDF documents or audio files uploaded by users and provides detailed notes or answers questions based on the content using OpenAI Whisper and Cohere.
+This application is a Streamlit-based AI teacher bot that transcribes PDF documents or audio files uploaded by users and provides detailed notes or answers questions based on the content using Deepgram and Cohere.
 
 ## Setup and Running the Application
 
