@@ -1,0 +1,5 @@
+streamlit
+PyPDF2
+deepgram
+langchain
+langchain_community
